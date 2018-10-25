@@ -23,11 +23,13 @@ public class Sample {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("(//div[@class='_3wU53n'])[1]")).click();
 		Set<String> allhandles = driver.getWindowHandles();
+		System.out.println(allhandles);
 		for(String childWindow : allhandles) {
 			if(!parent.equals(childWindow)) {
 				driver.switchTo().window(childWindow);
 			}
 		}
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//button[@class='_2AkmmA _2Npkh4 _2MWPVK']")).click();
 	}				
 
