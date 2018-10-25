@@ -27,6 +27,8 @@ public class Sample {
 		for(String childWindow : allhandles) {
 			if(!parent.equals(childWindow)) {
 				driver.switchTo().window(childWindow);
+				//"Good Job"
+				//"Great"
 			}
 		}
 		Thread.sleep(2000);
